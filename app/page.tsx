@@ -307,10 +307,10 @@ export default function Home() {
               </ul>
             </div>
 
-            {/* Soft Skills Column */}
+            {/* Systems Skills Column */}
             <div>
               <h3 className="font-[family-name:var(--font-loram)] text-xl sm:text-2xl font-bold text-[#3E5AAD] dark:text-[#F5F5DC] mb-4">
-                Soft
+                Systems
               </h3>
               <ul className="font-[family-name:var(--font-dm-sans)] text-sm sm:text-base text-[#3E5AAD] dark:text-[#F5F5DC] space-y-2">
                 <li>SEO Optimization</li>
@@ -323,6 +323,19 @@ export default function Home() {
                     (if it's something I care about)
                   </i>
                 </li>
+              </ul>
+            </div>
+
+            {/* Soft Skills Column */}
+            <div>
+              <h3 className="font-[family-name:var(--font-loram)] text-xl sm:text-2xl font-bold text-[#3E5AAD] dark:text-[#F5F5DC] mb-4">
+                Soft
+              </h3>
+              <ul className="font-[family-name:var(--font-dm-sans)] text-sm sm:text-base text-[#3E5AAD] dark:text-[#F5F5DC] space-y-2">
+                <li>Me Talk Good Sometimes</li>
+                <li>Also Listen Well</li>
+                <li>My Team is My Life</li>
+                <li>I've been said to take exceptional meeting notes</li>
               </ul>
             </div>
           </div>
