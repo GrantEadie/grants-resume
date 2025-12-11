@@ -44,6 +44,26 @@ export default function Home() {
                   by a conviction that we can cultivate a deeper harmony between
                   human life and the living world we inhabit.
                 </p>
+                <a
+                  href="/portfolio"
+                  className="font-[family-name:var(--font-dm-sans)] inline-flex items-center gap-1.5 mt-6 text-base sm:text-lg font-semibold text-[#3E5AAD] dark:text-[#F5F5DC] underline underline-offset-4 decoration-1 hover:underline-offset-8 hover:decoration-2 transition-all duration-300 group"
+                >
+                  see portfolio
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                  >
+                    <path d="M7 17L17 7" />
+                    <path d="M7 7h10v10" />
+                  </svg>
+                </a>
               </div>
             </div>
           </FadeInSection>
