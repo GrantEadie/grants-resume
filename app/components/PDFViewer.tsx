@@ -28,7 +28,7 @@ export default function PDFViewer({
 }: PDFViewerProps) {
   const [numPages, setNumPages] = useState<number | null>(null);
   const [currentPage, setCurrentPage] = useState<number>(initialPage);
-  const [displayPage, setDisplayPage] = useState<number>(initialPage);
+  const [prevPage, setPrevPage] = useState<number | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [scale, setScale] = useState<number>(1.0);
@@ -53,35 +53,41 @@ export default function PDFViewer({
     console.error('PDF Load Error:', error);
   };
 
-  // Page transition with fade effect and scroll preservation
+  // Smooth crossfade transition between pages
   const changePageWithTransition = useCallback((newPage: number) => {
-    if (isTransitioning || newPage === displayPage) return;
+    if (isTransitioning || newPage === currentPage) return;
 
     // Save current scroll position
     scrollPositionRef.current = window.scrollY;
 
-    // Update current page for navigation state
-    setCurrentPage(newPage);
+    // Set previous page for crossfade
+    setPrevPage(currentPage);
 
-    // Start fade out
+    // Start transition
     setIsTransitioning(true);
 
-    // After fade out completes, change the displayed page
-    setTimeout(() => {
-      setDisplayPage(newPage);
+    // Update to new page immediately (will render behind at opacity 0)
+    setCurrentPage(newPage);
 
-      // Restore scroll position immediately
+    // After a brief moment to let new page render, start crossfade
+    requestAnimationFrame(() => {
+      // Restore scroll position
       window.scrollTo({
         top: scrollPositionRef.current,
         behavior: 'instant' as ScrollBehavior,
       });
 
-      // Small delay before fade in to ensure page is rendered
-      requestAnimationFrame(() => {
+      // End transition (triggers crossfade via CSS)
+      setTimeout(() => {
         setIsTransitioning(false);
-      });
-    }, 150); // Fade out duration
-  }, [displayPage, isTransitioning]);
+
+        // Clean up previous page after transition completes
+        setTimeout(() => {
+          setPrevPage(null);
+        }, 200); // Match CSS transition duration
+      }, 50);
+    });
+  }, [currentPage, isTransitioning]);
 
   const goToPreviousPage = useCallback(() => {
     const newPage = Math.max(1, currentPage - 1);
@@ -279,22 +285,39 @@ export default function PDFViewer({
         >
           <div
             ref={pageContainerRef}
-            className="shadow-lg sm:shadow-2xl rounded-lg overflow-hidden border-2 border-[#3E5AAD]/20 dark:border-[#F5F5DC]/20 bg-white dark:bg-gray-800"
+            className="relative shadow-lg sm:shadow-2xl rounded-lg overflow-hidden border-2 border-[#3E5AAD]/20 dark:border-[#F5F5DC]/20 bg-white dark:bg-gray-800"
           >
+            {/* Previous page - fading out */}
+            {prevPage !== null && (
+              <div
+                className={`absolute inset-0 transition-opacity duration-200 ease-in-out ${
+                  isTransitioning ? 'opacity-100' : 'opacity-0'
+                }`}
+                style={{ zIndex: 1 }}
+              >
+                <Page
+                  pageNumber={prevPage}
+                  width={pageWidth}
+                  scale={scale}
+                  loading={<div className="h-0"></div>}
+                  renderTextLayer={false}
+                  renderAnnotationLayer={false}
+                />
+              </div>
+            )}
+
+            {/* Current page - fading in */}
             <div
-              className={`transition-opacity duration-150 ease-in-out ${
+              className={`transition-opacity duration-200 ease-in-out ${
                 isTransitioning ? 'opacity-0' : 'opacity-100'
               }`}
+              style={{ zIndex: 2, position: 'relative' }}
             >
               <Page
-                pageNumber={displayPage}
+                pageNumber={currentPage}
                 width={pageWidth}
                 scale={scale}
-                loading={
-                  <div className="flex items-center justify-center h-96">
-                    <div className="w-8 h-8 border-3 border-[#3E5AAD] dark:border-[#F5F5DC] border-t-transparent rounded-full animate-spin"></div>
-                  </div>
-                }
+                loading={<div className="h-0"></div>}
                 renderTextLayer={true}
                 renderAnnotationLayer={true}
               />
