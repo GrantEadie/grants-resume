@@ -1,3 +1,4 @@
+import Image from "next/image";
 import ThemeToggle from "./components/ThemeToggle";
 import FadeInSection from "./components/FadeInSection";
 import AnimatedHeroHeading from "./components/AnimatedHeroHeading";
@@ -444,9 +445,16 @@ export default function Home() {
       <section className="min-h-[60vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 bg-[#F5F5DC] dark:bg-[#1a1a2e]">
         <FadeInSection>
           <div className="max-w-5xl w-full text-center">
+            <Image
+              src="/blue headshot_comped.jpg"
+              alt="Grant Eadie"
+              width={96}
+              height={96}
+              className="rounded-full object-cover w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-5 sm:mb-6"
+            />
             <AnimatedHeading
               as="h2"
-              className="font-[family-name:var(--font-loram)] text-3xl sm:text-4xl md:text-5xl font-bold text-[#3E5AAD] dark:text-[#F5F5DC] mb-6 sm:mb-8"
+              className="font-[family-name:var(--font-loram)] text-3xl sm:text-4xl md:text-5xl font-bold text-[#3E5AAD] dark:text-[#F5F5DC] mb-4 sm:mb-6"
             >
               Get In Touch
             </AnimatedHeading>
