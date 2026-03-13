@@ -446,7 +446,7 @@ export default function Home() {
         <FadeInSection>
           <div className="max-w-5xl w-full text-center">
             <Image
-              src="/blue headshot_comped.jpg"
+              src="/headshot.jpg"
               alt="Grant Eadie"
               width={96}
               height={96}
