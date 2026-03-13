@@ -7,7 +7,7 @@ import AnimatedDecorativeShape from "./components/AnimatedDecorativeShape";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#F5F5DC] dark:bg-[#1a1a2e]">
+    <div className="min-h-screen bg-[#FFFFFF] dark:bg-[#2A09F3]">
       <ThemeToggle />
 
       {/* Hero Section */}
@@ -22,16 +22,16 @@ export default function Home() {
                 <AnimatedHeroHeading />
                 <AnimatedHeading
                   as="h3"
-                  className="font-[family-name:var(--font-loram)] text-xl sm:text-xl md:text-2xl lg:text-4xl font-bold [-webkit-text-stroke:1px_#3E5AAD] dark:[-webkit-text-stroke:1px_#F5F5DC] [-webkit-text-fill-color:transparent] tracking-wide"
+                  className="font-[family-name:var(--font-loram)] text-xl sm:text-xl md:text-2xl lg:text-4xl font-bold [-webkit-text-stroke:1px_#2A09F3] dark:[-webkit-text-stroke:1px_#FFFFFF] [-webkit-text-fill-color:transparent] tracking-wide"
                 >
                   Web Dev | Designer | Etc
                 </AnimatedHeading>
               </div>
 
-              <div className="h-px w-16 sm:w-24 bg-[#3E5AAD] dark:bg-[#F5F5DC]"></div>
+              <div className="h-px w-16 sm:w-24 bg-[#2A09F3] dark:bg-[#FFFFFF]"></div>
 
               <div className="max-w-2xl">
-                <p className="font-[family-name:var(--font-dm-sans)] text-lg sm:text-xl md:text-2xl text-[#3E5AAD]/90 dark:text-[#F5F5DC]/90 leading-relaxed">
+                <p className="font-[family-name:var(--font-dm-sans)] text-lg sm:text-xl md:text-2xl text-[#2A09F3]/90 dark:text-[#FFFFFF]/90 leading-relaxed">
                   Hi, I'm Grant, a developer and designer pulled toward work
                   that weaves technology into the fabric of community. I build
                   tools that help organizations articulate their purpose, and
@@ -40,7 +40,7 @@ export default function Home() {
                 </p>
                 <a
                   href="/portfolio"
-                  className="font-[family-name:var(--font-dm-sans)] inline-flex items-center gap-1.5 mt-6 text-base sm:text-lg font-semibold text-[#3E5AAD] dark:text-[#F5F5DC] underline underline-offset-4 decoration-1 hover:underline-offset-8 hover:decoration-2 transition-all duration-300 group"
+                  className="font-[family-name:var(--font-dm-sans)] inline-flex items-center gap-1.5 mt-6 text-base sm:text-lg font-semibold text-[#2A09F3] dark:text-[#FFFFFF] underline underline-offset-4 decoration-1 hover:underline-offset-8 hover:decoration-2 transition-all duration-300 group"
                 >
                   see portfolio
                   <svg
@@ -65,12 +65,12 @@ export default function Home() {
       </section>
 
       {/* Timeline Section */}
-      <section className="min-h-screen px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 bg-[#E8E6D9] dark:bg-[#0f0f1e]">
+      <section className="min-h-screen px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 bg-[#F0F0F0] dark:bg-[#2007CF]">
         <div className="max-w-5xl mx-auto">
           <FadeInSection>
             <AnimatedHeading
               as="h2"
-              className="font-[family-name:var(--font-loram)] text-3xl sm:text-4xl md:text-5xl font-bold text-[#3E5AAD] dark:text-[#F5F5DC] mb-8 sm:mb-12 md:mb-16"
+              className="font-[family-name:var(--font-loram)] text-3xl sm:text-4xl md:text-5xl font-bold text-[#2A09F3] dark:text-[#FFFFFF] mb-8 sm:mb-12 md:mb-16"
             >
               Work
             </AnimatedHeading>
@@ -79,24 +79,24 @@ export default function Home() {
           <div className="space-y-8 sm:space-y-10 md:space-y-12">
             {/* Timeline Item 1 */}
             <FadeInSection delay={300}>
-              <div className="relative pl-6 sm:pl-8 border-l-2 border-[#3E5AAD]/30 dark:border-[#F5F5DC]/30">
-                <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-[#3E5AAD] dark:bg-[#F5F5DC]"></div>
-                <div className="bg-[#3E5AAD]/[0.06] dark:bg-[#F5F5DC]/[0.05] rounded-lg py-4 px-4 sm:px-5">
+              <div className="relative pl-6 sm:pl-8 border-l-2 border-[#2A09F3]/30 dark:border-[#FFFFFF]/30">
+                <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-[#2A09F3] dark:bg-[#FFFFFF]"></div>
+                <div className="bg-white/60 dark:bg-white/10 backdrop-blur-md border border-white/70 dark:border-white/20 shadow-lg rounded-lg py-4 px-4 sm:px-5">
                   <div className="mb-1 sm:mb-2 flex items-center gap-2">
-                    <span className="font-[family-name:var(--font-dm-sans)] text-xs sm:text-sm font-semibold text-[#3E5AAD]/70 dark:text-[#F5F5DC]/70">
+                    <span className="font-[family-name:var(--font-dm-sans)] text-xs sm:text-sm font-semibold text-[#2A09F3]/70 dark:text-[#FFFFFF]/70">
                       2019 - Present
                     </span>
-                    <span className="font-[family-name:var(--font-dm-sans)] text-[10px] font-semibold tracking-wide uppercase px-1.5 py-0.5 rounded bg-[#3E5AAD]/15 dark:bg-[#F5F5DC]/15 text-[#3E5AAD] dark:text-[#F5F5DC]">
+                    <span className="font-[family-name:var(--font-dm-sans)] text-[10px] font-semibold tracking-wide uppercase px-1.5 py-0.5 rounded bg-[#2A09F3]/15 dark:bg-[#FFFFFF]/15 text-[#2A09F3] dark:text-[#FFFFFF]">
                       Now
                     </span>
                   </div>
                   <AnimatedHeading
                     as="h3"
-                    className="font-[family-name:var(--font-loram)] text-xl sm:text-2xl font-bold text-[#3E5AAD] dark:text-[#F5F5DC] mb-1 sm:mb-2 leading-tight"
+                    className="font-[family-name:var(--font-loram)] text-xl sm:text-2xl font-bold text-[#2A09F3] dark:text-[#FFFFFF] mb-1 sm:mb-2 leading-tight"
                   >
                     Freelance Web Developer
                   </AnimatedHeading>
-                  <ul className="font-[family-name:var(--font-dm-sans)] text-sm sm:text-base text-[#3E5AAD] dark:text-[#F5F5DC] leading-relaxed list-disc space-y-1.5 marker:text-[8px] marker:text-[#3E5AAD]/50 dark:marker:text-[#F5F5DC]/50">
+                  <ul className="font-[family-name:var(--font-dm-sans)] text-sm sm:text-base text-[#2A09F3] dark:text-[#FFFFFF] leading-relaxed list-disc space-y-1.5 marker:text-[8px] marker:text-[#2A09F3]/50 dark:marker:text-[#FFFFFF]/50">
                     <li>
                       Develop production-ready sites using WordPress, Drupal,
                       React, Astro, and Next.js, selecting the right tool for
@@ -130,7 +130,7 @@ export default function Home() {
                     href="https://raredimension.com/work/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-[family-name:var(--font-dm-sans)] inline-flex items-center gap-1.5 mt-3 text-sm sm:text-base font-semibold text-[#3E5AAD] dark:text-[#F5F5DC] underline underline-offset-4 decoration-1 hover:underline-offset-8 hover:decoration-2 transition-all duration-300 group"
+                    className="font-[family-name:var(--font-dm-sans)] inline-flex items-center gap-1.5 mt-3 text-sm sm:text-base font-semibold text-[#2A09F3] dark:text-[#FFFFFF] underline underline-offset-4 decoration-1 hover:underline-offset-8 hover:decoration-2 transition-all duration-300 group"
                   >
                     see some projects
                     <svg
@@ -153,23 +153,23 @@ export default function Home() {
             </FadeInSection>
             {/* Timeline Item 2 */}
             <FadeInSection delay={100}>
-              <div className="relative pl-6 sm:pl-8 border-l-2 border-[#3E5AAD]/30 dark:border-[#F5F5DC]/30">
-                <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-[#3E5AAD] dark:bg-[#F5F5DC]"></div>
+              <div className="relative pl-6 sm:pl-8 border-l-2 border-[#2A09F3]/30 dark:border-[#FFFFFF]/30">
+                <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-[#2A09F3] dark:bg-[#FFFFFF]"></div>
                 <div className="mb-1 sm:mb-2">
-                  <span className="font-[family-name:var(--font-dm-sans)] text-xs sm:text-sm font-semibold text-[#3E5AAD]/70 dark:text-[#F5F5DC]/70">
+                  <span className="font-[family-name:var(--font-dm-sans)] text-xs sm:text-sm font-semibold text-[#2A09F3]/70 dark:text-[#FFFFFF]/70">
                     2022 - 2024
                   </span>
                 </div>
                 <AnimatedHeading
                   as="h3"
-                  className="font-[family-name:var(--font-loram)] text-xl sm:text-2xl font-bold text-[#3E5AAD] dark:text-[#F5F5DC] mb-1 sm:mb-2 leading-tight"
+                  className="font-[family-name:var(--font-loram)] text-xl sm:text-2xl font-bold text-[#2A09F3] dark:text-[#FFFFFF] mb-1 sm:mb-2 leading-tight"
                 >
                   TwispWorks Foundation 501(c)(3)
                 </AnimatedHeading>
-                <p className="font-[family-name:var(--font-dm-sans)] italic text-sm sm:text-base text-[#3E5AAD]/80 dark:text-[#F5F5DC]/80 mb-3">
+                <p className="font-[family-name:var(--font-dm-sans)] italic text-sm sm:text-base text-[#2A09F3]/80 dark:text-[#FFFFFF]/80 mb-3">
                   Development/Design/Communications
                 </p>
-                <ul className="font-[family-name:var(--font-dm-sans)] text-sm sm:text-base text-[#3E5AAD] dark:text-[#F5F5DC] leading-relaxed list-disc space-y-1.5 marker:text-[8px] marker:text-[#3E5AAD]/50 dark:marker:text-[#F5F5DC]/50">
+                <ul className="font-[family-name:var(--font-dm-sans)] text-sm sm:text-base text-[#2A09F3] dark:text-[#FFFFFF] leading-relaxed list-disc space-y-1.5 marker:text-[8px] marker:text-[#2A09F3]/50 dark:marker:text-[#FFFFFF]/50">
                   <li>
                     Rebuilt organization's website using WordPress and custom
                     development for a 6.4-acre campus housing 35+ businesses.
@@ -192,7 +192,7 @@ export default function Home() {
                   href="https://twispworks.org/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-[family-name:var(--font-dm-sans)] inline-flex items-center gap-1.5 mt-3 text-sm sm:text-base font-semibold text-[#3E5AAD] dark:text-[#F5F5DC] underline underline-offset-4 decoration-1 hover:underline-offset-8 hover:decoration-2 transition-all duration-300 group"
+                  className="font-[family-name:var(--font-dm-sans)] inline-flex items-center gap-1.5 mt-3 text-sm sm:text-base font-semibold text-[#2A09F3] dark:text-[#FFFFFF] underline underline-offset-4 decoration-1 hover:underline-offset-8 hover:decoration-2 transition-all duration-300 group"
                 >
                   check it out
                   <svg
@@ -215,23 +215,23 @@ export default function Home() {
 
             {/* Timeline Item 3 */}
             <FadeInSection delay={200}>
-              <div className="relative pl-6 sm:pl-8 border-l-2 border-[#3E5AAD]/30 dark:border-[#F5F5DC]/30">
-                <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-[#3E5AAD] dark:bg-[#F5F5DC]"></div>
+              <div className="relative pl-6 sm:pl-8 border-l-2 border-[#2A09F3]/30 dark:border-[#FFFFFF]/30">
+                <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-[#2A09F3] dark:bg-[#FFFFFF]"></div>
                 <div className="mb-1 sm:mb-2">
-                  <span className="font-[family-name:var(--font-dm-sans)] text-xs sm:text-sm font-semibold text-[#3E5AAD]/70 dark:text-[#F5F5DC]/70">
+                  <span className="font-[family-name:var(--font-dm-sans)] text-xs sm:text-sm font-semibold text-[#2A09F3]/70 dark:text-[#FFFFFF]/70">
                     2019 — 2022
                   </span>
                 </div>
                 <AnimatedHeading
                   as="h3"
-                  className="font-[family-name:var(--font-loram)] text-xl sm:text-2xl font-bold text-[#3E5AAD] dark:text-[#F5F5DC] mb-1 sm:mb-2 leading-tight"
+                  className="font-[family-name:var(--font-loram)] text-xl sm:text-2xl font-bold text-[#2A09F3] dark:text-[#FFFFFF] mb-1 sm:mb-2 leading-tight"
                 >
                   Smiling Woods Yurts - Manufacturer
                 </AnimatedHeading>
-                <p className="font-[family-name:var(--font-dm-sans)] italic text-sm sm:text-base text-[#3E5AAD]/80 dark:text-[#F5F5DC]/80 mb-3">
+                <p className="font-[family-name:var(--font-dm-sans)] italic text-sm sm:text-base text-[#2A09F3]/80 dark:text-[#FFFFFF]/80 mb-3">
                    Development/Design/Communications
                 </p>
-                <ul className="font-[family-name:var(--font-dm-sans)] text-sm sm:text-base text-[#3E5AAD] dark:text-[#F5F5DC] leading-relaxed list-disc space-y-1.5 marker:text-[8px] marker:text-[#3E5AAD]/50 dark:marker:text-[#F5F5DC]/50">
+                <ul className="font-[family-name:var(--font-dm-sans)] text-sm sm:text-base text-[#2A09F3] dark:text-[#FFFFFF] leading-relaxed list-disc space-y-1.5 marker:text-[8px] marker:text-[#2A09F3]/50 dark:marker:text-[#FFFFFF]/50">
                   <li>
                     Designed and built a custom enterprise system for customer
                     pipeline and project management.
@@ -249,7 +249,7 @@ export default function Home() {
                   href="https://smilingwoodsyurts.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-[family-name:var(--font-dm-sans)] inline-flex items-center gap-1.5 mt-3 text-sm sm:text-base font-semibold text-[#3E5AAD] dark:text-[#F5F5DC] underline underline-offset-4 decoration-1 hover:underline-offset-8 hover:decoration-2 transition-all duration-300 group"
+                  className="font-[family-name:var(--font-dm-sans)] inline-flex items-center gap-1.5 mt-3 text-sm sm:text-base font-semibold text-[#2A09F3] dark:text-[#FFFFFF] underline underline-offset-4 decoration-1 hover:underline-offset-8 hover:decoration-2 transition-all duration-300 group"
                 >
                   see it in the wild
                   <svg
@@ -272,20 +272,20 @@ export default function Home() {
 
             {/* Timeline Item 4 */}
             <FadeInSection delay={400}>
-              <div className="relative pl-6 sm:pl-8 border-l-2 border-[#3E5AAD]/30 dark:border-[#F5F5DC]/30">
-                <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-[#3E5AAD] dark:bg-[#F5F5DC]"></div>
+              <div className="relative pl-6 sm:pl-8 border-l-2 border-[#2A09F3]/30 dark:border-[#FFFFFF]/30">
+                <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-[#2A09F3] dark:bg-[#FFFFFF]"></div>
                 <div className="mb-1 sm:mb-2">
-                  <span className="font-[family-name:var(--font-dm-sans)] text-xs sm:text-sm font-semibold text-[#3E5AAD]/70 dark:text-[#F5F5DC]/70">
+                  <span className="font-[family-name:var(--font-dm-sans)] text-xs sm:text-sm font-semibold text-[#2A09F3]/70 dark:text-[#FFFFFF]/70">
                     2014 — 2019
                   </span>
                 </div>
                 <AnimatedHeading
                   as="h3"
-                  className="font-[family-name:var(--font-loram)] text-xl sm:text-2xl font-bold text-[#3E5AAD] dark:text-[#F5F5DC] mb-1 sm:mb-2 leading-tight"
+                  className="font-[family-name:var(--font-loram)] text-xl sm:text-2xl font-bold text-[#2A09F3] dark:text-[#FFFFFF] mb-1 sm:mb-2 leading-tight"
                 >
                   Full Time Touring Musician
                 </AnimatedHeading>
-                <ul className="font-[family-name:var(--font-dm-sans)] text-sm sm:text-base text-[#3E5AAD] dark:text-[#F5F5DC] leading-relaxed list-disc space-y-1.5 marker:text-[8px] marker:text-[#3E5AAD]/50 dark:marker:text-[#F5F5DC]/50">
+                <ul className="font-[family-name:var(--font-dm-sans)] text-sm sm:text-base text-[#2A09F3] dark:text-[#FFFFFF] leading-relaxed list-disc space-y-1.5 marker:text-[8px] marker:text-[#2A09F3]/50 dark:marker:text-[#FFFFFF]/50">
                   <li>
                     Wrote some solo albums, worked with lots of other musicians.
                   </li>
@@ -297,7 +297,7 @@ export default function Home() {
                   href="#"
                   target="https://open.spotify.com/artist/41JNAYVuPs7zwJbQBQ6tec"
                   rel="noopener noreferrer"
-                  className="font-[family-name:var(--font-dm-sans)] inline-flex items-center gap-1.5 mt-3 text-sm sm:text-base font-semibold text-[#3E5AAD] dark:text-[#F5F5DC] underline underline-offset-4 decoration-1 hover:underline-offset-8 hover:decoration-2 transition-all duration-300 group"
+                  className="font-[family-name:var(--font-dm-sans)] inline-flex items-center gap-1.5 mt-3 text-sm sm:text-base font-semibold text-[#2A09F3] dark:text-[#FFFFFF] underline underline-offset-4 decoration-1 hover:underline-offset-8 hover:decoration-2 transition-all duration-300 group"
                 >
                   give it a listen
                   <svg
@@ -322,12 +322,12 @@ export default function Home() {
       </section>
 
       {/* Skills Section */}
-      <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 bg-[#F5F5DC] dark:bg-[#1a1a2e]">
+      <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 bg-[#FFFFFF] dark:bg-[#2A09F3]">
         <div className="max-w-5xl mx-auto">
           <FadeInSection>
             <AnimatedHeading
               as="h2"
-              className="font-[family-name:var(--font-loram)] text-3xl sm:text-4xl md:text-5xl font-bold text-[#3E5AAD] dark:text-[#F5F5DC] mb-8 sm:mb-12 md:mb-16"
+              className="font-[family-name:var(--font-loram)] text-3xl sm:text-4xl md:text-5xl font-bold text-[#2A09F3] dark:text-[#FFFFFF] mb-8 sm:mb-12 md:mb-16"
             >
               Skills
             </AnimatedHeading>
@@ -339,11 +339,11 @@ export default function Home() {
               <div>
                 <AnimatedHeading
                   as="h3"
-                  className="font-[family-name:var(--font-loram)] text-xl sm:text-2xl font-bold text-[#3E5AAD] dark:text-[#F5F5DC] mb-4"
+                  className="font-[family-name:var(--font-loram)] text-xl sm:text-2xl font-bold text-[#2A09F3] dark:text-[#FFFFFF] mb-4"
                 >
                   Technology
                 </AnimatedHeading>
-                <ul className="font-[family-name:var(--font-dm-sans)] text-sm sm:text-base text-[#3E5AAD] dark:text-[#F5F5DC] space-y-2">
+                <ul className="font-[family-name:var(--font-dm-sans)] text-sm sm:text-base text-[#2A09F3] dark:text-[#FFFFFF] space-y-2">
                   <li>JavaScript / TypeScript</li>
                   <li>PHP / WordPress / Drupal</li>
                   <li>Version Control / Git</li>
@@ -358,11 +358,11 @@ export default function Home() {
               <div>
                 <AnimatedHeading
                   as="h3"
-                  className="font-[family-name:var(--font-loram)] text-xl sm:text-2xl font-bold text-[#3E5AAD] dark:text-[#F5F5DC] mb-4"
+                  className="font-[family-name:var(--font-loram)] text-xl sm:text-2xl font-bold text-[#2A09F3] dark:text-[#FFFFFF] mb-4"
                 >
                   Design
                 </AnimatedHeading>
-                <ul className="font-[family-name:var(--font-dm-sans)] text-sm sm:text-base text-[#3E5AAD] dark:text-[#F5F5DC] space-y-2">
+                <ul className="font-[family-name:var(--font-dm-sans)] text-sm sm:text-base text-[#2A09F3] dark:text-[#FFFFFF] space-y-2">
                   <li>Adobe Photoshop</li>
                   <li>Adobe Illustrator</li>
                   <li>Adobe InDesign</li>
@@ -374,11 +374,11 @@ export default function Home() {
               <div>
                 <AnimatedHeading
                   as="h3"
-                  className="font-[family-name:var(--font-loram)] text-xl sm:text-2xl font-bold text-[#3E5AAD] dark:text-[#F5F5DC] mb-4"
+                  className="font-[family-name:var(--font-loram)] text-xl sm:text-2xl font-bold text-[#2A09F3] dark:text-[#FFFFFF] mb-4"
                 >
                   Systems
                 </AnimatedHeading>
-                <ul className="font-[family-name:var(--font-dm-sans)] text-sm sm:text-base text-[#3E5AAD] dark:text-[#F5F5DC] space-y-2">
+                <ul className="font-[family-name:var(--font-dm-sans)] text-sm sm:text-base text-[#2A09F3] dark:text-[#FFFFFF] space-y-2">
                   <li>SEO Optimization</li>
                   <li>Google Analytics</li>
                   <li>Brand Development</li>
@@ -396,11 +396,11 @@ export default function Home() {
               <div>
                 <AnimatedHeading
                   as="h3"
-                  className="font-[family-name:var(--font-loram)] text-xl sm:text-2xl font-bold text-[#3E5AAD] dark:text-[#F5F5DC] mb-4"
+                  className="font-[family-name:var(--font-loram)] text-xl sm:text-2xl font-bold text-[#2A09F3] dark:text-[#FFFFFF] mb-4"
                 >
                   Soft
                 </AnimatedHeading>
-                <ul className="font-[family-name:var(--font-dm-sans)] text-sm sm:text-base text-[#3E5AAD] dark:text-[#F5F5DC] space-y-2">
+                <ul className="font-[family-name:var(--font-dm-sans)] text-sm sm:text-base text-[#2A09F3] dark:text-[#FFFFFF] space-y-2">
                   <li>Me Talk Good Sometimes</li>
                   <li>Also Listen Well</li>
                   <li>My Team is My Life</li>
@@ -413,7 +413,7 @@ export default function Home() {
       </section>
 
       {/* Education Section */}
-      <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 bg-[#E8E6D9] dark:bg-[#0f0f1e]">
+      <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 bg-[#F0F0F0] dark:bg-[#2007CF]">
         <FadeInSection>
           <div className="max-w-5xl mx-auto flex items-center justify-center gap-4">
             <svg
@@ -425,12 +425,12 @@ export default function Home() {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="w-8 h-8 sm:w-10 sm:h-10 text-[#3E5AAD] dark:text-[#F5F5DC]"
+              className="w-8 h-8 sm:w-10 sm:h-10 text-[#2A09F3] dark:text-[#FFFFFF]"
             >
               <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
               <path d="M6 12v5c3 3 9 3 12 0v-5" />
             </svg>
-            <div className="font-[family-name:var(--font-dm-sans)] text-base sm:text-lg text-[#3E5AAD] dark:text-[#F5F5DC]">
+            <div className="font-[family-name:var(--font-dm-sans)] text-base sm:text-lg text-[#2A09F3] dark:text-[#FFFFFF]">
               <span className="font-semibold">
                 Computer Science & Violin/Viola Performance
               </span>{" "}
@@ -442,11 +442,11 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section className="min-h-[60vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 bg-[#F5F5DC] dark:bg-[#1a1a2e]">
+      <section className="min-h-[60vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 bg-[#FFFFFF] dark:bg-[#2A09F3]">
         <FadeInSection>
           <div className="max-w-5xl w-full text-center">
             <Image
-              src="/headshot.jpg"
+              src="/grant-headshot.jpg"
               alt="Grant Eadie"
               width={96}
               height={96}
@@ -454,13 +454,13 @@ export default function Home() {
             />
             <AnimatedHeading
               as="h2"
-              className="font-[family-name:var(--font-loram)] text-3xl sm:text-4xl md:text-5xl font-bold text-[#3E5AAD] dark:text-[#F5F5DC] mb-4 sm:mb-6"
+              className="font-[family-name:var(--font-loram)] text-3xl sm:text-4xl md:text-5xl font-bold text-[#2A09F3] dark:text-[#FFFFFF] mb-4 sm:mb-6"
             >
               Get In Touch
             </AnimatedHeading>
             <a
               href="mailto:grantleadie@gmail.com"
-              className="font-[family-name:var(--font-dm-sans)] inline-block text-lg sm:text-xl md:text-2xl lg:text-3xl text-[#3E5AAD] dark:text-[#F5F5DC] hover:text-[#3E5AAD]/70 dark:hover:text-[#F5F5DC]/70 transition-colors underline decoration-2 underline-offset-4 break-all sm:break-normal px-2"
+              className="font-[family-name:var(--font-dm-sans)] inline-block text-lg sm:text-xl md:text-2xl lg:text-3xl text-[#2A09F3] dark:text-[#FFFFFF] hover:text-[#2A09F3]/70 dark:hover:text-[#FFFFFF]/70 transition-colors underline decoration-2 underline-offset-4 break-all sm:break-normal px-2"
             >
               grantleadie@gmail.com
             </a>

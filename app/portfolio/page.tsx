@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function PortfolioPage() {
   return (
-    <div className="min-h-screen bg-[#F5F5DC] dark:bg-[#1a1a2e]">
+    <div className="min-h-screen bg-[#FFFFFF] dark:bg-[#2A09F3]">
       <ThemeToggle />
 
       <section className="px-2 sm:px-6 lg:px-8 py-8 sm:py-16 md:py-20 pb-24 sm:pb-20">
@@ -20,7 +20,7 @@ export default function PortfolioPage() {
             <div className="mb-6 sm:mb-8">
               <Link
                 href="/"
-                className="inline-flex items-center gap-2 font-[family-name:var(--font-dm-sans)] text-sm sm:text-base font-semibold text-[#3E5AAD] dark:text-[#F5F5DC] hover:underline underline-offset-4 transition-all duration-300 group"
+                className="inline-flex items-center gap-2 font-[family-name:var(--font-dm-sans)] text-sm sm:text-base font-semibold text-[#2A09F3] dark:text-[#FFFFFF] hover:underline underline-offset-4 transition-all duration-300 group"
               >
                 <svg
                   className="w-5 h-5 transition-transform duration-300 group-hover:-translate-x-1"
@@ -33,7 +33,7 @@ export default function PortfolioPage() {
                 Back to Home
               </Link>
             </div>
-            <h1 className="font-[family-name:var(--font-loram)] text-4xl sm:text-5xl md:text-6xl font-bold text-[#3E5AAD] dark:text-[#F5F5DC] mb-6 sm:mb-12 text-center px-2">
+            <h1 className="font-[family-name:var(--font-loram)] text-4xl sm:text-5xl md:text-6xl font-bold text-[#2A09F3] dark:text-[#FFFFFF] mb-6 sm:mb-12 text-center px-2">
               Portfolio
             </h1>
           </FadeInSection>

@@ -208,11 +208,11 @@ export default function PDFViewer({
           <button
             onClick={zoomOut}
             disabled={scale <= 0.5}
-            className="min-h-12 min-w-12 sm:min-h-10 sm:min-w-10 px-3 py-3 sm:px-4 sm:py-2 rounded-full bg-[#3E5AAD]/20 dark:bg-[#F5F5DC]/20 border-2 border-[#3E5AAD] dark:border-[#F5F5DC] transition-all duration-300 disabled:opacity-40 disabled:cursor-not-allowed active:scale-95 hover:scale-105 disabled:hover:scale-100"
+            className="min-h-12 min-w-12 sm:min-h-10 sm:min-w-10 px-3 py-3 sm:px-4 sm:py-2 rounded-full bg-[#2A09F3]/20 dark:bg-[#FFFFFF]/20 border-2 border-[#2A09F3] dark:border-[#FFFFFF] transition-all duration-300 disabled:opacity-40 disabled:cursor-not-allowed active:scale-95 hover:scale-105 disabled:hover:scale-100"
             aria-label="Zoom out"
           >
             <svg
-              className="w-5 h-5 sm:w-5 sm:h-5 text-[#3E5AAD] dark:text-[#F5F5DC]"
+              className="w-5 h-5 sm:w-5 sm:h-5 text-[#2A09F3] dark:text-[#FFFFFF]"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -223,7 +223,7 @@ export default function PDFViewer({
 
           <button
             onClick={resetZoom}
-            className="min-h-12 sm:min-h-10 px-4 py-3 sm:py-2 rounded-full bg-[#3E5AAD]/20 dark:bg-[#F5F5DC]/20 border-2 border-[#3E5AAD] dark:border-[#F5F5DC] transition-all duration-300 active:scale-95 hover:scale-105 font-[family-name:var(--font-dm-sans)] text-sm font-semibold text-[#3E5AAD] dark:text-[#F5F5DC]"
+            className="min-h-12 sm:min-h-10 px-4 py-3 sm:py-2 rounded-full bg-[#2A09F3]/20 dark:bg-[#FFFFFF]/20 border-2 border-[#2A09F3] dark:border-[#FFFFFF] transition-all duration-300 active:scale-95 hover:scale-105 font-[family-name:var(--font-dm-sans)] text-sm font-semibold text-[#2A09F3] dark:text-[#FFFFFF]"
             aria-label="Reset zoom"
           >
             {Math.round(scale * 100)}%
@@ -232,11 +232,11 @@ export default function PDFViewer({
           <button
             onClick={zoomIn}
             disabled={scale >= 3.0}
-            className="min-h-12 min-w-12 sm:min-h-10 sm:min-w-10 px-3 py-3 sm:px-4 sm:py-2 rounded-full bg-[#3E5AAD]/20 dark:bg-[#F5F5DC]/20 border-2 border-[#3E5AAD] dark:border-[#F5F5DC] transition-all duration-300 disabled:opacity-40 disabled:cursor-not-allowed active:scale-95 hover:scale-105 disabled:hover:scale-100"
+            className="min-h-12 min-w-12 sm:min-h-10 sm:min-w-10 px-3 py-3 sm:px-4 sm:py-2 rounded-full bg-[#2A09F3]/20 dark:bg-[#FFFFFF]/20 border-2 border-[#2A09F3] dark:border-[#FFFFFF] transition-all duration-300 disabled:opacity-40 disabled:cursor-not-allowed active:scale-95 hover:scale-105 disabled:hover:scale-100"
             aria-label="Zoom in"
           >
             <svg
-              className="w-5 h-5 sm:w-5 sm:h-5 text-[#3E5AAD] dark:text-[#F5F5DC]"
+              className="w-5 h-5 sm:w-5 sm:h-5 text-[#2A09F3] dark:text-[#FFFFFF]"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -256,10 +256,10 @@ export default function PDFViewer({
         onTouchEnd={handleTouchEnd}
       >
         {isLoading && (
-          <div className="flex items-center justify-center h-96 bg-[#E8E6D9] dark:bg-[#0f0f1e] rounded-lg border-2 border-[#3E5AAD]/20 dark:border-[#F5F5DC]/20">
+          <div className="flex items-center justify-center h-96 bg-[#F0F0F0] dark:bg-[#2A09F3] rounded-lg border-2 border-[#2A09F3]/20 dark:border-[#FFFFFF]/20">
             <div className="text-center">
-              <div className="w-12 h-12 border-4 border-[#3E5AAD] dark:border-[#F5F5DC] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-              <p className="font-[family-name:var(--font-dm-sans)] text-[#3E5AAD] dark:text-[#F5F5DC]">
+              <div className="w-12 h-12 border-4 border-[#2A09F3] dark:border-[#FFFFFF] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+              <p className="font-[family-name:var(--font-dm-sans)] text-[#2A09F3] dark:text-[#FFFFFF]">
                 Loading PDF...
               </p>
             </div>
@@ -267,7 +267,7 @@ export default function PDFViewer({
         )}
 
         {error && (
-          <div className="flex items-center justify-center h-96 bg-[#E8E6D9] dark:bg-[#0f0f1e] rounded-lg border-2 border-red-500/50">
+          <div className="flex items-center justify-center h-96 bg-[#F0F0F0] dark:bg-[#2A09F3] rounded-lg border-2 border-red-500/50">
             <div className="text-center px-4">
               <p className="font-[family-name:var(--font-dm-sans)] text-red-600 dark:text-red-400 text-lg">
                 {error}
@@ -285,7 +285,7 @@ export default function PDFViewer({
         >
           <div
             ref={pageContainerRef}
-            className="relative shadow-lg sm:shadow-2xl rounded-lg overflow-hidden border-2 border-[#3E5AAD]/20 dark:border-[#F5F5DC]/20 bg-white dark:bg-gray-800"
+            className="relative shadow-lg sm:shadow-2xl rounded-lg overflow-hidden border-2 border-[#2A09F3]/20 dark:border-[#FFFFFF]/20 bg-white dark:bg-gray-800"
           >
             {/* Previous page - fading out */}
             {prevPage !== null && (
@@ -328,16 +328,16 @@ export default function PDFViewer({
 
       {/* Navigation Controls - Sticky on Mobile */}
       {!error && numPages && (
-        <div className="w-full max-w-4xl sm:max-w-none flex flex-row items-center justify-center gap-3 sm:gap-6 sticky sm:static bottom-4 sm:bottom-auto bg-[#F5F5DC]/95 dark:bg-[#1a1a2e]/95 sm:bg-transparent dark:sm:bg-transparent backdrop-blur-sm sm:backdrop-blur-none px-4 py-3 sm:px-0 sm:py-0 rounded-full sm:rounded-none shadow-lg sm:shadow-none z-10">
+        <div className="w-full max-w-4xl sm:max-w-none flex flex-row items-center justify-center gap-3 sm:gap-6 sticky sm:static bottom-4 sm:bottom-auto bg-[#FFFFFF]/95 dark:bg-[#2A09F3]/95 sm:bg-transparent dark:sm:bg-transparent backdrop-blur-sm sm:backdrop-blur-none px-4 py-3 sm:px-0 sm:py-0 rounded-full sm:rounded-none shadow-lg sm:shadow-none z-10">
           {/* Previous Button */}
           <button
             onClick={goToPreviousPage}
             disabled={currentPage <= 1 || isTransitioning}
-            className="group min-h-12 min-w-12 sm:min-h-0 sm:min-w-0 flex items-center justify-center px-3 py-3 sm:px-6 sm:py-3 rounded-full bg-[#3E5AAD]/20 dark:bg-[#F5F5DC]/20 border-2 border-[#3E5AAD] dark:border-[#F5F5DC] transition-all duration-300 disabled:opacity-40 disabled:cursor-not-allowed active:scale-95 hover:scale-105 disabled:hover:scale-100"
+            className="group min-h-12 min-w-12 sm:min-h-0 sm:min-w-0 flex items-center justify-center px-3 py-3 sm:px-6 sm:py-3 rounded-full bg-[#2A09F3]/20 dark:bg-[#FFFFFF]/20 border-2 border-[#2A09F3] dark:border-[#FFFFFF] transition-all duration-300 disabled:opacity-40 disabled:cursor-not-allowed active:scale-95 hover:scale-105 disabled:hover:scale-100"
             aria-label="Previous page"
           >
             <svg
-              className="w-6 h-6 sm:w-6 sm:h-6 text-[#3E5AAD] dark:text-[#F5F5DC]"
+              className="w-6 h-6 sm:w-6 sm:h-6 text-[#2A09F3] dark:text-[#FFFFFF]"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -348,10 +348,10 @@ export default function PDFViewer({
 
           {/* Page Indicator */}
           {showPageNumbers && (
-            <div className={`font-[family-name:var(--font-dm-sans)] text-base sm:text-base font-semibold text-[#3E5AAD] dark:text-[#F5F5DC] min-w-[100px] sm:min-w-[120px] text-center transition-opacity duration-200 ${
+            <div className={`font-[family-name:var(--font-dm-sans)] text-base sm:text-base font-semibold text-[#2A09F3] dark:text-[#FFFFFF] min-w-[100px] sm:min-w-[120px] text-center transition-opacity duration-200 ${
               isTransitioning ? 'opacity-50' : 'opacity-100'
             }`}>
-              <span className="hidden sm:inline">Page </span>{currentPage} <span className="text-[#3E5AAD]/60 dark:text-[#F5F5DC]/60">/</span> {numPages}
+              <span className="hidden sm:inline">Page </span>{currentPage} <span className="text-[#2A09F3]/60 dark:text-[#FFFFFF]/60">/</span> {numPages}
             </div>
           )}
 
@@ -359,11 +359,11 @@ export default function PDFViewer({
           <button
             onClick={goToNextPage}
             disabled={currentPage >= numPages || isTransitioning}
-            className="group min-h-12 min-w-12 sm:min-h-0 sm:min-w-0 flex items-center justify-center px-3 py-3 sm:px-6 sm:py-3 rounded-full bg-[#3E5AAD]/20 dark:bg-[#F5F5DC]/20 border-2 border-[#3E5AAD] dark:border-[#F5F5DC] transition-all duration-300 disabled:opacity-40 disabled:cursor-not-allowed active:scale-95 hover:scale-105 disabled:hover:scale-100"
+            className="group min-h-12 min-w-12 sm:min-h-0 sm:min-w-0 flex items-center justify-center px-3 py-3 sm:px-6 sm:py-3 rounded-full bg-[#2A09F3]/20 dark:bg-[#FFFFFF]/20 border-2 border-[#2A09F3] dark:border-[#FFFFFF] transition-all duration-300 disabled:opacity-40 disabled:cursor-not-allowed active:scale-95 hover:scale-105 disabled:hover:scale-100"
             aria-label="Next page"
           >
             <svg
-              className="w-6 h-6 sm:w-6 sm:h-6 text-[#3E5AAD] dark:text-[#F5F5DC]"
+              className="w-6 h-6 sm:w-6 sm:h-6 text-[#2A09F3] dark:text-[#FFFFFF]"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -378,7 +378,7 @@ export default function PDFViewer({
       {showDownloadButton && !error && (
         <button
           onClick={downloadPDF}
-          className="min-h-12 sm:min-h-0 px-6 py-3 rounded-full bg-[#3E5AAD] dark:bg-[#F5F5DC] text-[#F5F5DC] dark:text-[#3E5AAD] font-[family-name:var(--font-dm-sans)] font-semibold transition-all duration-300 active:scale-95 hover:scale-105 flex items-center gap-2 text-base"
+          className="min-h-12 sm:min-h-0 px-6 py-3 rounded-full bg-[#2A09F3] dark:bg-[#FFFFFF] text-[#FFFFFF] dark:text-[#2A09F3] font-[family-name:var(--font-dm-sans)] font-semibold transition-all duration-300 active:scale-95 hover:scale-105 flex items-center gap-2 text-base"
           aria-label="Download PDF"
         >
           <svg
@@ -396,14 +396,14 @@ export default function PDFViewer({
 
       {/* Keyboard Shortcuts Help Text - Hidden on Mobile */}
       {enableKeyboardNav && !error && (
-        <p className="hidden sm:block font-[family-name:var(--font-dm-sans)] text-xs sm:text-sm text-[#3E5AAD]/60 dark:text-[#F5F5DC]/60 text-center">
+        <p className="hidden sm:block font-[family-name:var(--font-dm-sans)] text-xs sm:text-sm text-[#2A09F3]/60 dark:text-[#FFFFFF]/60 text-center">
           Use arrow keys to navigate • Home/End for first/last page
         </p>
       )}
 
       {/* Mobile Swipe Hint - Only Visible on Mobile */}
       {!error && numPages && (
-        <p className="sm:hidden font-[family-name:var(--font-dm-sans)] text-xs text-[#3E5AAD]/60 dark:text-[#F5F5DC]/60 text-center px-4">
+        <p className="sm:hidden font-[family-name:var(--font-dm-sans)] text-xs text-[#2A09F3]/60 dark:text-[#FFFFFF]/60 text-center px-4">
           Swipe left or right to navigate pages
         </p>
       )}

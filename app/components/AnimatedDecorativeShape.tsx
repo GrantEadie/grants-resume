@@ -36,7 +36,7 @@ export default function AnimatedDecorativeShape() {
         width="300"
         height="300"
         viewBox="0 0 128 128"
-        className="w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 text-[#3E5AAD] dark:text-[#F5F5DC] rotate-12"
+        className="w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 text-[#2A09F3] dark:text-[#FFFFFF] rotate-12"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path

@@ -10,12 +10,12 @@ export default function ThemeToggle() {
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-      setIsDark(true);
-      document.documentElement.classList.add('dark');
-    } else {
+    if (savedTheme === 'light') {
       setIsDark(false);
       document.documentElement.classList.remove('dark');
+    } else {
+      setIsDark(true);
+      document.documentElement.classList.add('dark');
     }
   }, []);
 
@@ -34,17 +34,17 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="fixed top-6 right-6 z-50 w-16 h-8 rounded-full bg-[#3E5AAD]/20 dark:bg-[#F5F5DC]/20 border-2 border-[#3E5AAD] dark:border-[#F5F5DC] transition-all duration-300 ease-in-out hover:scale-110"
+      className="fixed top-6 right-6 z-50 w-16 h-8 rounded-full bg-[#2A09F3]/20 dark:bg-[#FFFFFF]/20 border-2 border-[#2A09F3] dark:border-[#FFFFFF] transition-all duration-300 ease-in-out hover:scale-110"
       aria-label="Toggle theme"
     >
       <div
-        className={`absolute top-0.5 w-6 h-6 rounded-full bg-[#3E5AAD] dark:bg-[#F5F5DC] transition-all duration-300 ease-in-out ${
+        className={`absolute top-0.5 w-6 h-6 rounded-full bg-[#2A09F3] dark:bg-[#FFFFFF] transition-all duration-300 ease-in-out ${
           isDark ? 'right-0.5' : 'left-0.5'
         }`}
       >
         {/* Sun icon for light mode */}
         <svg
-          className={`absolute inset-0 w-full h-full p-1 text-[#F5F5DC] transition-opacity duration-300 ${
+          className={`absolute inset-0 w-full h-full p-1 text-[#FFFFFF] transition-opacity duration-300 ${
             isDark ? 'opacity-0' : 'opacity-100'
           }`}
           fill="currentColor"
@@ -59,7 +59,7 @@ export default function ThemeToggle() {
 
         {/* Moon icon for dark mode */}
         <svg
-          className={`absolute inset-0 w-full h-full p-1 text-[#3E5AAD] transition-opacity duration-300 ${
+          className={`absolute inset-0 w-full h-full p-1 text-[#2A09F3] transition-opacity duration-300 ${
             isDark ? 'opacity-100' : 'opacity-0'
           }`}
           fill="currentColor"
